@@ -2,7 +2,7 @@ name: CI - Build, Dockerize, Push, Release
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, master ]
 
 jobs:
 
