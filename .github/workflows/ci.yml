@@ -18,11 +18,10 @@ jobs:
         id: vars
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
 
-      # Adapte le chemin "back" et la version de Node au contenu réel du repo
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '14'   # <-- vérifie le champ "engines" du package.json de back/
+          node-version: '14
           cache: 'npm'
           cache-dependency-path: back/package-lock.json
 
@@ -57,11 +56,10 @@ jobs:
         id: vars
         run: echo "short_sha=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
 
-      # Adapte le chemin "front" et la version de Node au contenu réel du repo
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '14'   # <-- vérifie le champ "engines" du package.json de front/
+          node-version: '14'
           cache: 'npm'
           cache-dependency-path: front/package-lock.json
 
