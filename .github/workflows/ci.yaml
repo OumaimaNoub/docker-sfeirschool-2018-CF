@@ -87,6 +87,8 @@ jobs:
   release:
     needs: [ back, front ]
     runs-on: ubuntu-latest
+    permissions: 
+       contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
